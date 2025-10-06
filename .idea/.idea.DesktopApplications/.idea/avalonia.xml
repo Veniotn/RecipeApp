@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="DesktopApplications/Views/MainWindow.axaml" value="DesktopApplications/DesktopApplications.csproj" />
+        <entry key="RecipeApp/App.axaml" value="RecipeApp/RecipeApp.csproj" />
+        <entry key="RecipeApp/Models/UserControls/LeftPanel.axaml" value="RecipeApp/RecipeApp.csproj" />
+        <entry key="RecipeApp/UserControls/LeftPanelUC.axaml" value="RecipeApp/RecipeApp.csproj" />
+        <entry key="RecipeApp/UserControls/RecipePanel.axaml" value="RecipeApp/RecipeApp.csproj" />
+        <entry key="RecipeApp/UserControls/TopBar.axaml" value="RecipeApp/RecipeApp.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

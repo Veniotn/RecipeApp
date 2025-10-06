@@ -1,0 +1,25 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="DesktopApplications.App"
+             xmlns:local="using:DesktopApplications"
+             xmlns:TopBar="clr-namespace:DesktopApplications.UserControls"
+             RequestedThemeVariant="Dark">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+    <Application.Styles>
+        <FluentTheme/>
+        <Style Selector="Window">
+           <Setter Property="Background" Value="Wheat"/>
+       </Style>
+        
+        <Style Selector="TopBar|TopBarUC">
+            <Style Selector="^ StackPanel">
+                <Setter Property="Height" Value="10"/>
+            </Style>
+        </Style>
+    </Application.Styles>
+</Application>
