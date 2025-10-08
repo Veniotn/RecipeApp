@@ -65,3 +65,4 @@ D:\Projects\DesktopApplications\RecipeApp\obj\Debug\net9.0\refint\Avalonia\Recip
 D:\Projects\DesktopApplications\RecipeApp\obj\Debug\net9.0\RecipeApp.csproj.Up2Date
 D:\Projects\DesktopApplications\RecipeApp\obj\Debug\net9.0\RecipeApp.genruntimeconfig.cache
 D:\Projects\DesktopApplications\RecipeApp\obj\Debug\net9.0\ref\RecipeApp.dll
+D:\Projects\DesktopApplications\RecipeApp\obj\Debug\net9.0\RecipeApp.sourcelink.json

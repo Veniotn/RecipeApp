@@ -15,13 +15,24 @@
              to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <Viewbox>
+    
+    <Grid RowDefinitions="Auto,*">
+        <uc:TopBarUC Grid.Row="0" DataContext="{Binding TopBarViewModel}"/>
         
-        <StackPanel Name="MainStack" Orientation="Vertical">
-            <uc:TopBarUC DataContext="{Binding TopBarViewModel}"/>
-            <StackPanel Name="MainContent" Orientation="Horizontal">
-                <uc:LeftPanelUC DataContext="{Binding LeftPanelViewModel}"/>
-            </StackPanel>
-        </StackPanel>
-    </Viewbox>
+        <Grid Grid.Row="1" Grid.ColumnDefinitions="Auto,*">
+            <uc:LeftPanelUC Grid.Column="0" DataContext="{Binding LeftPanelViewModel}"/>
+            <uc:RecipePanelUC Grid.Column="1"/>
+        </Grid>
+    </Grid>
+    
+    <!-- -->
+    <!-- <Viewbox Stretch="Uniform"> -->
+    <!--     <StackPanel Name="MainStack" Orientation="Vertical"> -->
+    <!--         <uc:TopBarUC DockPanel.Dock="Top" DataContext="{Binding TopBarViewModel}"/> -->
+    <!--         <StackPanel Name="MainContent" Orientation="Horizontal"> -->
+    <!--             <uc:LeftPanelUC DataContext="{Binding LeftPanelViewModel}"/> -->
+    <!--             <uc:RecipePanelUC/> -->
+    <!--         </StackPanel> -->
+    <!--     </StackPanel> -->
+    <!-- </Viewbox> -->
 </Window>

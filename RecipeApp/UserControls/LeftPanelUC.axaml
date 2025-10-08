@@ -14,10 +14,10 @@
                 <Button Name="UserName" Content="{Binding UserName}"/>
             </StackPanel>
             
-            <Button Name="SavedRecipesBtn"/>
-            <Button Name="SuggestedRecipesBtn"/>
-            <Button Name="FriendsRecipesBtn"/>
-            <Button Name="GroceryListBtn"/>
-            <Button Name="AddRecipeBtn"/>
+            <Button Classes="ActionBtn" Name="SavedRecipesBtn"/>
+            <Button Classes="ActionBtn" Name="SuggestedRecipesBtn"/>
+            <Button Classes="ActionBtn" Name="FriendsRecipesBtn"/>
+            <Button Classes="ActionBtn" Name="GroceryListBtn"/>
+            <Button Classes="ActionBtn" Name="AddRecipeBtn"/>
         </StackPanel>
 </UserControl>

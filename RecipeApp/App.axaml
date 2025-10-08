@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="DesktopApplications.App"
              xmlns:local="using:DesktopApplications"
-             xmlns:TopBar="clr-namespace:DesktopApplications.UserControls"
+             xmlns:UserControls="clr-namespace:DesktopApplications.UserControls"
              RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -12,14 +12,78 @@
   
     <Application.Styles>
         <FluentTheme/>
+        <!--Window Styles -->
         <Style Selector="Window">
-           <Setter Property="Background" Value="Wheat"/>
+           <Setter Property="Background" Value="#36393e"/>
        </Style>
+        <!--Window Styles -->
         
-        <Style Selector="TopBar|TopBarUC">
+        <!--Global Control Styles-->
+        <Style Selector="TextBlock">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style Selector="TextBox">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style Selector="Button">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <!--Global Control Styles-->
+        
+        <!--TopBar Styles-->
+        <Style Selector="UserControls|TopBarUC">
             <Style Selector="^ StackPanel">
                 <Setter Property="Height" Value="10"/>
+                <Setter Property="Margin" Value="0,0,0,50"/>
+            </Style>
+            
+            <Style Selector="^ TextBox">
+                <Setter Property="Width" Value="350"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Margin" Value="450,5,0,0"/>
+                <Setter Property="CornerRadius" Value="3"/>
+                <Setter Property="BorderBrush" Value="Gray"/>
+                <Setter Property="Background" Value="Gray"/>
             </Style>
         </Style>
+        <!--TopBar Styles-->
+        
+        <!--Left Panel Styles-->
+        <Style Selector="UserControls|LeftPanelUC">
+            <Style Selector="^ StackPanel">
+                <Setter Property="Margin" Value="0,0,10,0"/>
+            </Style>
+            
+            <Style Selector="^ Button">
+                <Setter Property="Background" Value="Blue"/>
+            </Style>
+            
+            <Style Selector="^ Button.ActionBtn">
+                <Setter Property="Width" Value="250"/>
+                <Setter Property="Height" Value="40"/>
+                <Setter Property="Margin" Value="5,30"/>
+                <Setter Property="CornerRadius" Value="3"/>
+            </Style>
+            
+            <Style Selector="^ Button#AddRecipeBtn.ActionBtn">
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Height" Value="60"/>
+            </Style>
+            
+        </Style>
+        <!--Left Panel Styles-->
+        
+        <!--RecipePanel Styles-->
+        <Style Selector="UserControls|RecipePanelUC">
+            <Setter Property="Margin" Value="2"/>
+            <Style Selector="^ Border">
+                <Setter Property="Background" Value="Gray"/>
+                <Setter Property="CornerRadius" Value="3"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+            </Style>
+        </Style>
+        <!--RecipePanel Styles-->
     </Application.Styles>
 </Application>
