@@ -3,6 +3,7 @@
              x:Class="DesktopApplications.App"
              xmlns:local="using:DesktopApplications"
              xmlns:UserControls="clr-namespace:DesktopApplications.UserControls"
+             xmlns:savedRecipes="clr-namespace:DesktopApplications.UserControls.RightPanel.SavedRecipes"
              RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -14,21 +15,21 @@
         <FluentTheme/>
         <!--Window Styles -->
         <Style Selector="Window">
-           <Setter Property="Background" Value="#36393e"/>
+           <Setter Property="Background" Value="#4A6FA5"/>
        </Style>
         <!--Window Styles -->
         
         <!--Global Control Styles-->
         <Style Selector="TextBlock">
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="#2B2D42"/>
         </Style>
         
         <Style Selector="TextBox">
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="#2B2D42"/>
         </Style>
         
         <Style Selector="Button">
-            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Foreground" Value="#2B2D42"/>
         </Style>
         <!--Global Control Styles-->
         
@@ -40,12 +41,12 @@
             </Style>
             
             <Style Selector="^ TextBox">
-                <Setter Property="Width" Value="350"/>
-                <Setter Property="Height" Value="20"/>
-                <Setter Property="Margin" Value="450,5,0,0"/>
+                <Setter Property="Width" Value="400"/>
+                <Setter Property="Height" Value="30"/>
+                <Setter Property="Margin" Value="520,5,0,0"/>
                 <Setter Property="CornerRadius" Value="3"/>
-                <Setter Property="BorderBrush" Value="Gray"/>
-                <Setter Property="Background" Value="Gray"/>
+                <Setter Property="BorderBrush" Value="#2B3D41"/>
+                <Setter Property="Background" Value="#EFFFFA"/>
             </Style>
         </Style>
         <!--TopBar Styles-->
@@ -57,7 +58,9 @@
             </Style>
             
             <Style Selector="^ Button">
-                <Setter Property="Background" Value="Blue"/>
+                <Setter Property="Background" Value="#EFFFFA"/>
+                <Setter Property="CornerRadius" Value="5"/>
+                <Setter Property="BorderBrush" Value="#2B2D42"/>
             </Style>
             
             <Style Selector="^ Button.ActionBtn">
@@ -65,25 +68,90 @@
                 <Setter Property="Height" Value="40"/>
                 <Setter Property="Margin" Value="5,30"/>
                 <Setter Property="CornerRadius" Value="3"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                
+                
+                <Style Selector="^:pressed">
+                    <Setter Property="Background" Value="#2B3D41"/>
+                    <Setter Property="Foreground" Value="#Effffa"/>
+                </Style>
             </Style>
             
             <Style Selector="^ Button#AddRecipeBtn.ActionBtn">
-                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Background" Value="#2B3D41"/>
+                <Setter Property="Foreground" Value="#effffa"/>
                 <Setter Property="Height" Value="60"/>
             </Style>
             
         </Style>
         <!--Left Panel Styles-->
         
+        <!--Right Panel Styles-->
+        
         <!--RecipePanel Styles-->
-        <Style Selector="UserControls|RecipePanelUC">
+        <Style Selector="UserControls|SavedRecipePanelUC">
             <Setter Property="Margin" Value="2"/>
             <Style Selector="^ Border">
-                <Setter Property="Background" Value="Gray"/>
+                <Setter Property="Background" Value="#EFFFFA"/>
                 <Setter Property="CornerRadius" Value="3"/>
-                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderBrush" Value="#BD4F6C"/>
+            </Style>
+            
+            <Style Selector="^ ScrollViewer">
+                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="Width" Value="1200"/>
+                <Setter Property="Height" Value="600"/>
+                <Setter Property="HorizontalScrollBarVisibility" Value="Visible"/>
+                <Setter Property="VerticalScrollBarVisibility" Value="Visible"/>
+                
             </Style>
         </Style>
+        
+        <!--Recipe Preview Styles-->
+        <Style Selector="savedRecipes|RecipePreviewUC">
+            <Style Selector="^ Button">
+                <Setter Property="Width" Value="500"/>
+                <Setter Property="Height" Value="500"/>
+            </Style>
+            <Style Selector="^ StackPanel#MainStack">
+                <Setter Property="Width" Value="300"/>
+                <Setter Property="Height" Value="300"/>
+                <Setter Property="Background" Value="Gray"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+                
+                <Style Selector="^ StackPanel">
+                    <Setter Property="Margin" Value="10"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+            </Style>
+            <Style Selector="^ Image">
+                <Setter Property="Width" Value="50"/>
+                <Setter Property="Height" Value="50"/>
+            </Style>
+            
+            <Style Selector="^ Button">
+                <Setter Property="Background" Value="Red"/>
+            </Style>
+            
+            <Style Selector="^ TextBlock">
+                <Setter Property="Foreground" Value="Red"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+            
+            <Style Selector="^ TextBlock#RecipeName">
+                <Setter Property="FontSize" Value="20"/>
+            </Style>
+        </Style>
+        <!--Recipe Preview Styles-->
+        
+        
         <!--RecipePanel Styles-->
+        
+        
+        
+        
+        <!--Right Panel Styles-->
     </Application.Styles>
 </Application>

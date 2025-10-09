@@ -9,7 +9,10 @@ public partial class MainWindowViewModel : ViewModelBase
     public string Greeting { get; } = "Welcome to Avalonia!";
 
     [ObservableProperty] private TopBarViewModel _topBarViewModel = new("Test");
-    [ObservableProperty] private LeftPanelViewModel _leftPanelViewModel = new ("Nick Veniot");
+
+    [ObservableProperty] private LeftPanelViewModel _leftPanelViewModel = new(new SavedRecipesViewModel(),
+        new SuggestedRecipeViewModel(), new FriendsRecipesViewModel(), new GroceryListViewModel(),
+        new AddRecipeViewModel(), "Nick Veniot");
 
 
 }

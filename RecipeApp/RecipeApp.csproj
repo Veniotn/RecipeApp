@@ -26,4 +26,15 @@
         </PackageReference>
         <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="UserControls\LeftPanel\LeftPanelUC.axaml.cs">
+        <DependentUpon>LeftPanelUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="UserControls\RightPanel\SavedRecipes\SavedRecipePanelUC.axaml.cs">
+        <DependentUpon>SavedRecipePanelUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
 </Project>

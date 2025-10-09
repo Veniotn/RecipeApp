@@ -4,9 +4,9 @@ using Avalonia.Markup.Xaml;
 
 namespace DesktopApplications.UserControls;
 
-public partial class RecipePanelUC : UserControl
+public partial class SavedRecipePanelUC : UserControl
 {
-    public RecipePanelUC()
+    public SavedRecipePanelUC()
     {
         InitializeComponent();
     }

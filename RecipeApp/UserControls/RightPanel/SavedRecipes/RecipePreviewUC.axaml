@@ -1,0 +1,31 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:DesktopApplications.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="DesktopApplications.UserControls.RightPanel.SavedRecipes.RecipePreviewUC"
+             x:DataType="vm:RecipeViewModel">
+        
+        <Button Command="{Binding ViewRecipe}">
+            <StackPanel Name="MainStack" Orientation="Vertical">
+                <!-- <Image Source="{Binding RecipeImage}"/> -->
+                <StackPanel Orientation="Horizontal">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Name="RecipeName" Text="{Binding RecipeName}"/>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Name="RatingTxt" Text="{Binding RatingHeaderTxt}"/>
+                                <TextBlock Name="RatingNum" Text="{Binding RatingTxt}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Name="TimeTxt" Text="{Binding TimeHeaderTxt}"/>
+                                <TextBlock Name="TimeNum" Text="{Binding TimeTxt}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Button>
+       
+</UserControl>
