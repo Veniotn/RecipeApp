@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace DesktopApplications.ViewModels;
@@ -7,14 +8,16 @@ namespace DesktopApplications.ViewModels;
 public partial class SavedRecipesViewModel : ViewModelBase
 {
 
-    public ObservableCollection<RecipeViewModel> Recipes { get; } = new();
+    [ObservableProperty] private ObservableCollection<RecipeViewModel> _recipes= new();
+    [ObservableProperty] private ObservableCollection<RecipeViewModel> _filteredRecipes = new();
+    [ObservableProperty] public bool _isVisible ;
 
-    [ObservableProperty] private RecipeViewModel vm = new RecipeViewModel("Quick Irish Stew", "10/10", "90min");
 
     public SavedRecipesViewModel()
     {
-        Recipes.Add(new RecipeViewModel("Quick Irish Stew", "10/10", "90min"));
+        Recipes.Add(new RecipeViewModel("Spaghetti Bolognese", "9", "60"));
     }
-    
-    
+
+
+
 }

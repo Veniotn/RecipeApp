@@ -7,10 +7,10 @@ namespace DesktopApplications.ViewModels;
 public partial class LeftPanelViewModel : ViewModelBase
 {
     [ObservableProperty] public SavedRecipesViewModel _SavedRecipesViewModel;
-    private SuggestedRecipeViewModel _suggestedRecipeViewModel;
-    private FriendsRecipesViewModel _friendsRecipesViewModel;
-    private GroceryListViewModel _groceryListViewModel;
-    private AddRecipeViewModel _addRecipeViewModel;
+    [ObservableProperty] private SuggestedRecipeViewModel _suggestedRecipeViewModel;
+    [ObservableProperty] private FriendsRecipesViewModel _friendsRecipesViewModel;
+    [ObservableProperty] private GroceryListViewModel _groceryListViewModel;
+    [ObservableProperty] private AddRecipeViewModel _addRecipeViewModel;
     
     [ObservableProperty] private string _userName;
     [ObservableProperty] private string _savedRecipeBtnTxt     = "Saved Recipes";
@@ -37,23 +37,31 @@ public partial class LeftPanelViewModel : ViewModelBase
     {
         if (sender is Button btn)
         {
-            Console.WriteLine(btn.Name);
-            
+            SavedRecipesViewModel.IsVisible = false;
+            SuggestedRecipeViewModel.IsVisible = false;
+            FriendsRecipesViewModel.IsVisible = false;
+            GroceryListViewModel.IsVisible = false;
+            AddRecipeViewModel.IsVisible = false;
             
             switch (btn.Name)
             {
-                case "SaveRecipesBtn":
+                case "SavedRecipesBtn":
+                    SavedRecipesViewModel.IsVisible = true;
                     break;
                 case "SuggestedRecipesBtn":
+                    SuggestedRecipeViewModel.IsVisible = true;
                     break;
                 case "FriendsRecipesBtn":
+                    FriendsRecipesViewModel.IsVisible = true;
                     break;
                 case "GroceryListBtn":
+                    GroceryListViewModel.IsVisible = true;
                     break;
                 case "AddRecipeBtn":
+                    AddRecipeViewModel.IsVisible = true;
                     break;
-                    
             }
         }
     }
+    
 }

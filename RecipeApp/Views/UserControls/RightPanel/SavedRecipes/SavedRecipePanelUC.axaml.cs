@@ -1,8 +1,6 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+﻿using Avalonia.Controls;
 
-namespace DesktopApplications.UserControls;
+namespace DesktopApplications.Views.UserControls.RightPanel.SavedRecipes;
 
 public partial class SavedRecipePanelUC : UserControl
 {

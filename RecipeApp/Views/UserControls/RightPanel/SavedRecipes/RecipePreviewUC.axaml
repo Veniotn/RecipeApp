@@ -9,7 +9,7 @@
         
         <Button Command="{Binding ViewRecipe}">
             <StackPanel Name="MainStack" Orientation="Vertical">
-                <!-- <Image Source="{Binding RecipeImage}"/> -->
+                <Image Source="{Binding RecipeImage}"/>
                 <StackPanel Orientation="Horizontal">
                     <StackPanel Orientation="Vertical">
                         <TextBlock Name="RecipeName" Text="{Binding RecipeName}"/>

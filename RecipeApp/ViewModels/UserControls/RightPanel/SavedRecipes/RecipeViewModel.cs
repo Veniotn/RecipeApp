@@ -17,8 +17,8 @@ public partial class RecipeViewModel : ViewModelBase
     public RecipeViewModel(string name, string rating, string time)
     {
         _recipeName = name;
-        _ratingTxt = rating;
-        _timeTxt = time;
+        _ratingTxt = rating + "/10";
+        _timeTxt = time + " min";
     }
 
     public RecipeViewModel(){}

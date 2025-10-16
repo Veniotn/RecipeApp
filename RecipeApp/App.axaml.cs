@@ -6,6 +6,7 @@ using System.Linq;
 using Avalonia.Markup.Xaml;
 using DesktopApplications.ViewModels;
 using DesktopApplications.Views;
+using DesktopApplications.UserControls;
 
 namespace DesktopApplications;
 

@@ -4,6 +4,10 @@
              xmlns:local="using:DesktopApplications"
              xmlns:UserControls="clr-namespace:DesktopApplications.UserControls"
              xmlns:savedRecipes="clr-namespace:DesktopApplications.UserControls.RightPanel.SavedRecipes"
+             xmlns:UserControls1="clr-namespace:DesktopApplications.Views.UserControls.RightPanel.SavedRecipes"
+             xmlns:UserControls2="clr-namespace:DesktopApplications.Views.UserControls"
+             xmlns:UserControls3="clr-namespace:DesktopApplications.UserControls.RightPanel"
+             
              RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
@@ -16,6 +20,8 @@
         <!--Window Styles -->
         <Style Selector="Window">
            <Setter Property="Background" Value="#4A6FA5"/>
+           <Setter Property="Width" Value="1500"/>
+           <Setter Property="Height" Value="700"/>
        </Style>
         <!--Window Styles -->
         
@@ -88,14 +94,27 @@
         <!--Left Panel Styles-->
         
         <!--Right Panel Styles-->
+        <Style Selector="UserControls2|RightPanelUC">
+            <Style Selector="^ Border">
+                <Setter Property="Background" Value="#EFFFFA"/>
+                <Setter Property="CornerRadius" Value="3"/>
+                <Setter Property="BorderBrush" Value="#BD4F6C"/>
+                <Setter Property="Width" Value="1200"/>
+                <Setter Property="Height" Value="600"/>
+            </Style>
+        </Style>
         
         <!--RecipePanel Styles-->
-        <Style Selector="UserControls|SavedRecipePanelUC">
+        <Style Selector="UserControls1|SavedRecipePanelUC">
             <Setter Property="Margin" Value="2"/>
             <Style Selector="^ Border">
                 <Setter Property="Background" Value="#EFFFFA"/>
                 <Setter Property="CornerRadius" Value="3"/>
                 <Setter Property="BorderBrush" Value="#BD4F6C"/>
+            </Style>
+            
+            <Style Selector="^ WrapPanel">
+                <Setter Property="Orientation" Value="Horizontal"/>
             </Style>
             
             <Style Selector="^ ScrollViewer">
@@ -109,15 +128,20 @@
             </Style>
         </Style>
         
+        
         <!--Recipe Preview Styles-->
         <Style Selector="savedRecipes|RecipePreviewUC">
             <Style Selector="^ Button">
-                <Setter Property="Width" Value="500"/>
-                <Setter Property="Height" Value="500"/>
-            </Style>
-            <Style Selector="^ StackPanel#MainStack">
                 <Setter Property="Width" Value="300"/>
                 <Setter Property="Height" Value="300"/>
+                <Setter Property="CornerRadius" Value="3"/>
+                
+                <Style Selector="^:pointerover /template/ StackPanel#MainStack">
+                    <Setter Property="Background" Value="#2B3D44"/>
+                </Style>
+                
+            </Style>
+            <Style Selector="^ StackPanel#MainStack">
                 <Setter Property="Background" Value="Gray"/>
                 <Setter Property="Margin" Value="10,0,0,0"/>
                 
@@ -127,16 +151,13 @@
                 </Style>
             </Style>
             <Style Selector="^ Image">
-                <Setter Property="Width" Value="50"/>
-                <Setter Property="Height" Value="50"/>
-            </Style>
-            
-            <Style Selector="^ Button">
-                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Width" Value="100"/>
+                <Setter Property="Height" Value="100"/>
+                <Setter Property="Source" Value="Assets/avalonia-logo.ico"/>
             </Style>
             
             <Style Selector="^ TextBlock">
-                <Setter Property="Foreground" Value="Red"/>
+                <Setter Property="Foreground" Value="#EFFFFA"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
             </Style>
             
@@ -145,9 +166,41 @@
             </Style>
         </Style>
         <!--Recipe Preview Styles-->
-        
-        
         <!--RecipePanel Styles-->
+        
+        <!--Add Recipe Panel Styles-->
+        <Style Selector="UserControls3|AddRecipeUC">
+            
+            <Style Selector="^ StackPanel#TopStackPanel">
+                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Margin" Value="500,5"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                
+                <Style Selector="^ TextBlock">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="FontSize" Value="30"/>
+                </Style>
+                <Style Selector="^ TextBox">
+                    <Setter Property="Width" Value="200"/>
+                    <Setter Property="Height" Value="100"/>
+                    <Setter Property="Background" Value="Black"/>
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="CornerRadius" Value="30"/>
+                </Style>
+               
+                <Style Selector="^ Button">
+                    <Setter Property="Width" Value="200"/>
+                    <Setter Property="Background" Value="#2B2D42"/>
+                    <Setter Property="Foreground" Value="#EFFFFA"/>
+                </Style>
+            
+                <Style Selector="^ Button#LinkBtn">
+                    <Setter Property="Background" Value="Red"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </Style>
+        </Style>
+        <!--Add Recipe Panel Styles-->
         
         
         

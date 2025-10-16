@@ -21,32 +21,45 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/LeftPanel/LeftPanelUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/FriendsRecipesUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/GroceryListUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/SavedRecipes/RecipePreviewUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/SavedRecipes/SavedRecipePanelUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/SuggestedRecipesUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/TopBarUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = 
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [D:/Projects/DesktopApplications/RecipeApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/LeftPanel/LeftPanelUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/RightPanel/AddRecipeUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/RightPanel/FriendsRecipesUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/RightPanel/GroceryListUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/RightPanel/SavedRecipes/RecipePreviewUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/RightPanel/SavedRecipes/SavedRecipePanelUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/RightPanel/SuggestedRecipesUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
-[D:/Projects/DesktopApplications/RecipeApp/UserControls/TopBarUC.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
 [D:/Projects/DesktopApplications/RecipeApp/Views/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/AddRecipes/AddRecipeUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/AddRecipes/RecipeParameterUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/RightPanelUC.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

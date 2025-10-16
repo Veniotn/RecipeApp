@@ -8,15 +8,34 @@ public partial class TopBarViewModel : ViewModelBase
 {
     [ObservableProperty] private string _header;
     [ObservableProperty] private string _searchBarWatermark = "Search Recipes";
-    private List<MenuItem> _menuItems;
+    [ObservableProperty] private string _searchText = "";
+    
+    private SavedRecipesViewModel _savedRecipesViewModel;
+    
+    // public string SearchText
+    // {
+    //     get => _searchText;
+    //     set
+    //     {
+    //         FilterRecipes();
+    //     }
+    // }
+    // private List<MenuItem> _menuItems;
     
 
 
-    public TopBarViewModel(string header)
+    public TopBarViewModel(string header, SavedRecipesViewModel savedRecipesViewModel)
     {
         _header = header;
+        _savedRecipesViewModel = savedRecipesViewModel;
         
     }
+    
+    
+    // private void FilterRecipes()
+    // {
+    //     
+    // }
     
     
     

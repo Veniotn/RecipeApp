@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:uc="clr-namespace:DesktopApplications.UserControls"
+        xmlns:userControls="clr-namespace:DesktopApplications.Views.UserControls"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="DesktopApplications.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
@@ -14,11 +15,13 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Grid RowDefinitions="Auto,*">
-        <uc:TopBarUC Grid.Row="0" DataContext="{Binding TopBarViewModel}"/>
-        <Grid Grid.Row="1" Grid.ColumnDefinitions="Auto,*">
-            <uc:LeftPanelUC Grid.Column="0" DataContext="{Binding LeftPanelViewModel}"/>
-            <uc:SavedRecipePanelUC Grid.Column="1" DataContext="{Binding LeftPanelViewModel.SavedRecipesViewModel}"/>
+    
+        <Grid RowDefinitions="Auto,*">
+            <uc:TopBarUC Grid.Row="0" DataContext="{Binding TopBarViewModel}"/>
+            <Grid Grid.Row="1" Grid.ColumnDefinitions="Auto,*">
+                <uc:LeftPanelUC Grid.Column="0" DataContext="{Binding LeftPanelViewModel}"/>
+                <userControls:RightPanelUC Grid.Column="1" DataContext="{Binding RightPanelViewModel}"/>
+            </Grid>
         </Grid>
-    </Grid>
+
 </Window>

@@ -28,12 +28,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="UserControls\LeftPanel\LeftPanelUC.axaml.cs">
-        <DependentUpon>LeftPanelUC.axaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
-      <Compile Update="UserControls\RightPanel\SavedRecipes\SavedRecipePanelUC.axaml.cs">
-        <DependentUpon>SavedRecipePanelUC.axaml</DependentUpon>
+      <AdditionalFiles Include="Views\UserControls\LeftPanel\LeftPanelUC.axaml" />
+      <AdditionalFiles Include="Views\UserControls\RightPanel\FriendsRecipesUC.axaml" />
+      <AdditionalFiles Include="Views\UserControls\RightPanel\GroceryListUC.axaml" />
+      <AdditionalFiles Include="Views\UserControls\RightPanel\SavedRecipes\RecipePreviewUC.axaml" />
+      <AdditionalFiles Include="Views\UserControls\RightPanel\SavedRecipes\SavedRecipePanelUC.axaml" />
+      <AdditionalFiles Include="Views\UserControls\RightPanel\SuggestedRecipesUC.axaml" />
+      <AdditionalFiles Include="Views\UserControls\TopBarUC.axaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\UserControls\RightPanel\AddRecipes\AddRecipeUC.axaml.cs">
+        <DependentUpon>AddRecipeUC.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
     </ItemGroup>

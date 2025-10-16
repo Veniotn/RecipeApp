@@ -1,0 +1,29 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:uc="clr-namespace:DesktopApplications.UserControls.RightPanel"
+             xmlns:vm="clr-namespace:DesktopApplications.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="DesktopApplications.UserControls.RightPanel.AddRecipeUC"
+             x:DataType="vm:AddRecipeViewModel">
+    
+    <StackPanel Orientation="Vertical" Name="MainStackPanel">
+        <StackPanel Orientation="Vertical" Name="TopStackPanel">
+            <TextBlock Text="{Binding HeaderText}"/>
+            <Button Content="{Binding UploadBtnTxt}"/>
+            <TextBox Name="LinkTextBox" Watermark="{Binding UploadLinkBoxTxt}"/>
+            <Button Name="LinkBtn"  Content="{Binding UploadLinkBtn}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Name="RecipeStackPanel">
+            <StackPanel Orientation="Vertical" Name="DetailsStackPanel">
+                <uc:RecipeParameterUC DataContext="{Binding Name}"/>
+                <uc:RecipeParameterUC DataContext="{Binding Protein}"/>
+                <uc:RecipeParameterUC DataContext="{Binding Time}"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="{Binding Tags}"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

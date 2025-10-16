@@ -4,11 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:DesktopApplications.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DesktopApplications.UserControls.TopBarUC"
-             x:DataType="vm:TopBarViewModel">
-    
-    <StackPanel Name="TopBar" Orientation="Horizontal">
-       <Menu/>
-       <TextBox Name="SearchBar" Watermark="{Binding SearchBarWatermark}"/>
+             x:Class="DesktopApplications.UserControls.RightPanel.RecipeParameterUC"
+             x:DataType="vm:RecipeParameterViewModel">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="{Binding ParameterName}"/>
+        <TextBox Text="{Binding ParameterInput}"/>
     </StackPanel>
 </UserControl>
