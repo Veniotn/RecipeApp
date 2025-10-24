@@ -8,11 +8,13 @@
              x:DataType="vm:LeftPanelViewModel">
     
     
+    <StackPanel Orientation="Horizontal">
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <Button Name="ProfilePic"/>
                 <Button Name="UserName" Content="{Binding UserName}"/>
             </StackPanel>
+            
             
             <Button Classes="ActionBtn" Name="SavedRecipesBtn" Content="{Binding SavedRecipeBtnTxt}"
             Command="{Binding ActionBtnClick}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
@@ -29,4 +31,6 @@
             <Button Classes="ActionBtn" Name="AddRecipeBtn" Content="{Binding AddRecipeBtnTxt}"
             Command="{Binding ActionBtnClick}" CommandParameter="{Binding RelativeSource={RelativeSource Self}}"/>
         </StackPanel>
+        
+    </StackPanel>
 </UserControl>

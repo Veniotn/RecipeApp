@@ -42,5 +42,9 @@
         <DependentUpon>AddRecipeUC.axaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+      <Compile Update="Views\UserControls\RightPanel\StepsUC.axaml.cs">
+        <DependentUpon>StepsUC.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
     </ItemGroup>
 </Project>

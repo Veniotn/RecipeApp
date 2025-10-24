@@ -63,3 +63,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/RightPanelUC.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/Projects/DesktopApplications/RecipeApp/Views/UserControls/RightPanel/StepsUC.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

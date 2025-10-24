@@ -2,11 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="DesktopApplications.App"
              xmlns:local="using:DesktopApplications"
-             xmlns:UserControls="clr-namespace:DesktopApplications.UserControls"
-             xmlns:savedRecipes="clr-namespace:DesktopApplications.UserControls.RightPanel.SavedRecipes"
-             xmlns:UserControls1="clr-namespace:DesktopApplications.Views.UserControls.RightPanel.SavedRecipes"
-             xmlns:UserControls2="clr-namespace:DesktopApplications.Views.UserControls"
-             xmlns:UserControls3="clr-namespace:DesktopApplications.UserControls.RightPanel"
+             xmlns:uc="clr-namespace:DesktopApplications.UserControls"
              
              RequestedThemeVariant="Dark">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
@@ -34,13 +30,14 @@
             <Setter Property="Foreground" Value="#2B2D42"/>
         </Style>
         
+        
         <Style Selector="Button">
             <Setter Property="Foreground" Value="#2B2D42"/>
         </Style>
         <!--Global Control Styles-->
         
         <!--TopBar Styles-->
-        <Style Selector="UserControls|TopBarUC">
+        <Style Selector="uc|TopBarUC">
             <Style Selector="^ StackPanel">
                 <Setter Property="Height" Value="10"/>
                 <Setter Property="Margin" Value="0,0,0,50"/>
@@ -58,7 +55,7 @@
         <!--TopBar Styles-->
         
         <!--Left Panel Styles-->
-        <Style Selector="UserControls|LeftPanelUC">
+        <Style Selector="uc|LeftPanelUC">
             <Style Selector="^ StackPanel">
                 <Setter Property="Margin" Value="0,0,10,0"/>
             </Style>
@@ -94,7 +91,7 @@
         <!--Left Panel Styles-->
         
         <!--Right Panel Styles-->
-        <Style Selector="UserControls2|RightPanelUC">
+        <Style Selector="uc|RightPanelUC">
             <Style Selector="^ Border">
                 <Setter Property="Background" Value="#EFFFFA"/>
                 <Setter Property="CornerRadius" Value="3"/>
@@ -105,7 +102,7 @@
         </Style>
         
         <!--RecipePanel Styles-->
-        <Style Selector="UserControls1|SavedRecipePanelUC">
+        <Style Selector="uc|SavedRecipePanelUC">
             <Setter Property="Margin" Value="2"/>
             <Style Selector="^ Border">
                 <Setter Property="Background" Value="#EFFFFA"/>
@@ -130,7 +127,7 @@
         
         
         <!--Recipe Preview Styles-->
-        <Style Selector="savedRecipes|RecipePreviewUC">
+        <Style Selector="uc|RecipePreviewUC">
             <Style Selector="^ Button">
                 <Setter Property="Width" Value="300"/>
                 <Setter Property="Height" Value="300"/>
@@ -169,36 +166,73 @@
         <!--RecipePanel Styles-->
         
         <!--Add Recipe Panel Styles-->
-        <Style Selector="UserControls3|AddRecipeUC">
+        
+        <Style Selector="uc|AddRecipeUC">
+            <Setter Property="Width" Value="1200"/>
+            <Setter Property="Height" Value="600"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            
+            <Style Selector="^ TextBlock.HeaderText">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Style>
+            
+            <Style Selector="^ TextBox">
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+            
+            <Style Selector="^ Border">
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="BorderThickness" Value="0.5"/>
+            </Style>
+            
             
             <Style Selector="^ StackPanel#TopStackPanel">
-                <Setter Property="Background" Value="Red"/>
-                <Setter Property="Margin" Value="500,5"/>
+                
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 
-                <Style Selector="^ TextBlock">
-                    <Setter Property="HorizontalAlignment" Value="Center"/>
-                    <Setter Property="FontSize" Value="30"/>
-                </Style>
-                <Style Selector="^ TextBox">
-                    <Setter Property="Width" Value="200"/>
-                    <Setter Property="Height" Value="100"/>
-                    <Setter Property="Background" Value="Black"/>
-                    <Setter Property="Foreground" Value="Black"/>
-                    <Setter Property="CornerRadius" Value="30"/>
-                </Style>
-               
                 <Style Selector="^ Button">
-                    <Setter Property="Width" Value="200"/>
-                    <Setter Property="Background" Value="#2B2D42"/>
-                    <Setter Property="Foreground" Value="#EFFFFA"/>
-                </Style>
-            
-                <Style Selector="^ Button#LinkBtn">
-                    <Setter Property="Background" Value="Red"/>
-                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    <Setter Property="Background" Value="#4A6FA5"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="Margin" Value="0,0,0,20"/>
                 </Style>
             </Style>
+            
+            
+            <Style Selector="^ TextBox">
+                <Setter Property="Width" Value="200"/>
+            </Style>
+            
+            <Style Selector="^ TextBox#StepTemplate">
+                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="MinWidth" Value="20"/>
+                <Setter Property="MaxWidth" Value="200"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="Red"/>
+            </Style>
+            
+            <Style Selector="^ TextBox#StepTextBox">
+                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                <Setter Property="TextWrapping" Value="Wrap"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="MinWidth" Value="20"/>
+                <Setter Property="MaxWidth" Value="200"/>
+                <Setter Property="VerticalAlignment" Value="Top"/>
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="Background" Value="Red"/>
+            </Style>
+            
+            <Style Selector="^ WrapPanel">
+                <Setter Property="Orientation" Value="Horizontal"/>
+                <Setter Property="MaxWidth" Value="500"/>
+            </Style>
+            
         </Style>
         <!--Add Recipe Panel Styles-->
         

@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:DesktopApplications.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DesktopApplications.UserControls.RightPanel.SavedRecipes.RecipePreviewUC"
+             x:Class="DesktopApplications.UserControls.RecipePreviewUC"
              x:DataType="vm:RecipeViewModel">
         
         <Button Command="{Binding ViewRecipe}">

@@ -2,7 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace DesktopApplications.Views.UserControls;
+namespace DesktopApplications.UserControls;
 
 public partial class RightPanelUC : UserControl
 {

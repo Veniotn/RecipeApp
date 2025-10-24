@@ -1,6 +1,6 @@
 ﻿using Avalonia.Controls;
 
-namespace DesktopApplications.Views.UserControls.RightPanel.SavedRecipes;
+namespace DesktopApplications.UserControls;
 
 public partial class SavedRecipePanelUC : UserControl
 {

@@ -2,26 +2,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:uc="clr-namespace:DesktopApplications.UserControls.RightPanel"
+             xmlns:uc="clr-namespace:DesktopApplications.UserControls"
              xmlns:vm="clr-namespace:DesktopApplications.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DesktopApplications.UserControls.RightPanel.AddRecipeUC"
+             x:Class="DesktopApplications.UserControls.AddRecipeUC"
              x:DataType="vm:AddRecipeViewModel">
     
+    
+    
     <StackPanel Orientation="Vertical" Name="MainStackPanel">
-        <StackPanel Orientation="Vertical" Name="TopStackPanel">
-            <TextBlock Text="{Binding HeaderText}"/>
-            <Button Content="{Binding UploadBtnTxt}"/>
-            <TextBox Name="LinkTextBox" Watermark="{Binding UploadLinkBoxTxt}"/>
-            <Button Name="LinkBtn"  Content="{Binding UploadLinkBtn}"/>
-        </StackPanel>
+        <!--Import Recipe-->
+        <Border>
+            <StackPanel Orientation="Vertical" Name="TopStackPanel">
+                <TextBlock Classes="HeaderText" Text="{Binding HeaderText}"/>
+                <Button Content="{Binding UploadBtnTxt}"/>
+                <!-- <TextBox Name="LinkTextBox" Watermark="{Binding UploadLinkBoxTxt}"/> -->
+                <!-- <Button Name="LinkBtn"  Content="{Binding UploadLinkBtn}"/> -->
+            </StackPanel>
+        </Border>
+        <!--Import Recipe-->
+        
+        <!--Manual Add-->
+        <TextBlock Classes="HeaderText" Text="{Binding OptionTwoText}"/>
+        
+        <!--Recipe Details-->
         <StackPanel Orientation="Horizontal" Name="RecipeStackPanel">
+            
+            <!--Recipe Overview-->
             <StackPanel Orientation="Vertical" Name="DetailsStackPanel">
                 <uc:RecipeParameterUC DataContext="{Binding Name}"/>
                 <uc:RecipeParameterUC DataContext="{Binding Protein}"/>
                 <uc:RecipeParameterUC DataContext="{Binding Time}"/>
             </StackPanel>
+            <!--Recipe Overview-->
+            
+            <!--Recipe Steps-->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="{Binding AddStepTxt}"/>
+                <Button Name="AddStepButton" Command="{Binding AddStep}"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical">
+                <TextBox Name="StepTextBox" Text="{Binding CurrentStep, UpdateSourceTrigger=PropertyChanged}">
+                    <TextBox.KeyBindings>
+                        <KeyBinding Command="{Binding AddStep}" Gesture="Enter"/>
+                    </TextBox.KeyBindings>
+                </TextBox>
+                
+                <ItemsControl ItemsSource="{Binding steps}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    
+                    
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBox Name="StepTemplate" Text="{Binding .}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+            <!--Recipe Steps-->
         </StackPanel>
+        <!--Recipe Details-->
+       
+        
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="{Binding Tags}"/>
         </StackPanel>
