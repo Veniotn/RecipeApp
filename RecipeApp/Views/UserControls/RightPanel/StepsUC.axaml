@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:DesktopApplications.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DesktopApplications.ViewModels.UserControls.RightPanel.StepsUC"
+             x:Class="DesktopApplications.UserControls.StepsUC"
              x:DataType="vm:StepViewModel">
     
         <StackPanel Orientation="Horizontal">
@@ -12,6 +12,8 @@
             <Border>
                 <TextBlock Text="{Binding StepText}"/>
             </Border>
-            <Button Command="{Binding DeleteStep}"/>
+            <Button Command="{Binding DeleteStep}">
+                <Image/>
+            </Button>
         </StackPanel>
 </UserControl>

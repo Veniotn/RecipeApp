@@ -233,6 +233,25 @@
                 <Setter Property="MaxWidth" Value="500"/>
             </Style>
             
+            
+            <Style Selector="^ uc|StepsUC">
+                <Style Selector="^ Border">
+                    <Setter Property="Background" Value="Gray"/>
+                </Style>
+            
+                <Style Selector="^ Button">
+                    <Setter Property="Background" Value="#4A6FA5"/>
+                    <Setter Property="Width" Value="30"/>
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    
+                    <Style Selector="^ Image">
+                        <Setter Property="Source" Value="{SvgImage Assets/Icons/trash-alt-svgrepo-com.svg}"/>
+                        <Setter Property="Width" Value="25"/>
+                        <Setter Property="Height" Value="25"/>
+                    </Style>
+                </Style>
+            </Style>
         </Style>
         <!--Add Recipe Panel Styles-->
         

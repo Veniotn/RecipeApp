@@ -8,6 +8,7 @@ public partial class StepViewModel : ViewModelBase
     
     [ObservableProperty] private string _stepNumber;
     [ObservableProperty] private string _stepText = "";
+    [ObservableProperty] private string _deleteText = "X";
     [ObservableProperty] private Image _deleteIcon;
 
 

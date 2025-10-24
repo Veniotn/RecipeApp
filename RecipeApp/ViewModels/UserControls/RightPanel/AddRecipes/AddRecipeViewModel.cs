@@ -1,6 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
-using DesktopApplications.ViewModels.UserControls.RightPanel;
+using DesktopApplications.UserControls;
 
 namespace DesktopApplications.ViewModels;
 
