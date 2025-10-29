@@ -33,23 +33,47 @@
                 <uc:RecipeParameterUC DataContext="{Binding Name}"/>
                 <uc:RecipeParameterUC DataContext="{Binding Protein}"/>
                 <uc:RecipeParameterUC DataContext="{Binding Time}"/>
+                
+                <TextBox Name="IngredientTextBox" Text="{Binding CurrentIngredient, UpdateSourceTrigger=PropertyChanged}">
+                    <TextBox.KeyBindings>
+                        <KeyBinding Command="{Binding AddItem}" Gesture="Enter" CommandParameter="{Binding IngredientParam}"/>
+                    </TextBox.KeyBindings>
+                </TextBox>
+                
+                
+                <ItemsControl ItemsSource="{Binding Ingredients}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    
+                    
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBox Name="StepTemplate" Text="{Binding .}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+                
+                
             </StackPanel>
             <!--Recipe Overview-->
             
             <!--Recipe Steps-->
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="{Binding AddStepTxt}"/>
-                <Button Name="AddStepButton" Command="{Binding AddStep}"/>
+                <Button Name="AddItemButton" Command="{Binding AddItem}" CommandParameter="{Binding StepParam}"/>
             </StackPanel>
             
             <StackPanel Orientation="Vertical">
                 <TextBox Name="StepTextBox" Text="{Binding CurrentStep, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.KeyBindings>
-                        <KeyBinding Command="{Binding AddStep}" Gesture="Enter"/>
+                        <KeyBinding Command="{Binding AddItem}" Gesture="Enter" CommandParameter="{Binding StepParam}"/>
                     </TextBox.KeyBindings>
                 </TextBox>
                 
-                <ItemsControl ItemsSource="{Binding steps}">
+                <ItemsControl ItemsSource="{Binding Steps}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel/>

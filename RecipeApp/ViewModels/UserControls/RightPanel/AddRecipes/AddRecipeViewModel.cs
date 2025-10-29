@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using CommunityToolkit.Mvvm.ComponentModel;
 using DesktopApplications.UserControls;
 
@@ -15,8 +16,11 @@ public partial class AddRecipeViewModel : ViewModelBase
     [ObservableProperty] private string _uploadLinkBtn = "Upload from Link";
     [ObservableProperty] private string _tags = "Tags: ";
     [ObservableProperty] private string _currentStep = "";
+    [ObservableProperty] private string _currentIngredient = "";
     [ObservableProperty] private string _stepWaterMark = "";
     [ObservableProperty] private string _addStepTxt = "Add Step";
+    [ObservableProperty] private string _StepParam = "Step";
+    [ObservableProperty] private string _IngredientParam = "Ingredient";
     
     
     
@@ -24,18 +28,47 @@ public partial class AddRecipeViewModel : ViewModelBase
     [ObservableProperty] private RecipeParameterViewModel _protein = new("Protein");
     [ObservableProperty] private RecipeParameterViewModel _Time = new("Time (min)");
     
-    public ObservableCollection<StepsUC> steps { get; } = new();
+    public ObservableCollection<StepsUC> Steps { get; } = new();
+    public ObservableCollection<StepsUC> Ingredients { get; } = new();
     private int stepNumber = 0;
+    private int ingredientNumber = 0;
     
-    public void AddStep()
+    public void AddItem(string type)
     {
-        stepNumber++;
-        if (!string.IsNullOrWhiteSpace(CurrentStep))
+        switch (type)
         {
-            steps.Add(new StepsUC(CurrentStep, stepNumber));
-            CurrentStep = string.Empty;
+            case "Step":
+                stepNumber++;
+                AddToList( StepParam, Steps, CurrentStep, stepNumber);
+                CurrentStep = "";
+                break;
+            case "Ingredient":
+                ingredientNumber++;
+                AddToList(IngredientParam, Ingredients, CurrentIngredient, ingredientNumber);
+                CurrentIngredient = "";
+                break;
         }
     }
     
+    private void AddToList(string type, ObservableCollection<StepsUC> list, string text, int number)
+    {
+        list.Add(new StepsUC(type, text, number, this));
+    }
+
+    public void DeteleStep(string type, int number)
+    {
+        switch (type)
+        {
+            case "Step":
+                RemoveFromList(Steps, number);
+                break;
+        }
+    }
+    
+    
+    private void RemoveFromList(ObservableCollection<StepsUC> list, int number)
+    {
+        list.RemoveAt(number);
+    }
     
 }

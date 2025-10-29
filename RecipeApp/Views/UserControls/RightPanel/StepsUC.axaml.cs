@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿using System;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using DesktopApplications.ViewModels;
@@ -12,9 +13,9 @@ public partial class StepsUC : UserControl
         InitializeComponent();
     }
 
-    public StepsUC(string currentStep, int stepNumber)
+    public StepsUC(string type, string currentStep, int stepNumber, AddRecipeViewModel addRecipeViewModel)
     {
-        DataContext = new StepViewModel(currentStep, stepNumber);
+        DataContext = new StepViewModel(type, currentStep, stepNumber, addRecipeViewModel);
         InitializeComponent();
     }
 }

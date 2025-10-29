@@ -10,7 +10,7 @@
         <StackPanel Orientation="Horizontal">
             <TextBlock Text="{Binding StepNumber}"/>
             <Border>
-                <TextBlock Text="{Binding StepText}"/>
+                <TextBlock Text="{Binding Text}"/>
             </Border>
             <Button Command="{Binding DeleteStep}">
                 <Image/>

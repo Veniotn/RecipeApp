@@ -29,6 +29,7 @@
         <entry key="RecipeApp/Views/UserControls/RightPanel/RightPanelUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/SavedRecipes/RecipePreviewUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/SavedRecipes/SavedRecipePanelUC.axaml" value="RecipeApp/RecipeApp.csproj" />
+        <entry key="RecipeApp/Views/UserControls/RightPanel/StepsUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/SuggestedRecipesUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/TopBarUC.axaml" value="RecipeApp/RecipeApp.csproj" />
       </map>
