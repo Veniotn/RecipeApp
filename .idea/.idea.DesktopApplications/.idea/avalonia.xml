@@ -23,9 +23,11 @@
         <entry key="RecipeApp/Views/UserControls/LeftPanel/LeftPanelUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/AddRecipeUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/AddRecipes/AddRecipeUC.axaml" value="RecipeApp/RecipeApp.csproj" />
+        <entry key="RecipeApp/Views/UserControls/RightPanel/AddRecipes/RecipeListUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/AddRecipes/RecipeParameterUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/FriendsRecipesUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/GroceryListUC.axaml" value="RecipeApp/RecipeApp.csproj" />
+        <entry key="RecipeApp/Views/UserControls/RightPanel/RecipeItemUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/RightPanelUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/SavedRecipes/RecipePreviewUC.axaml" value="RecipeApp/RecipeApp.csproj" />
         <entry key="RecipeApp/Views/UserControls/RightPanel/SavedRecipes/SavedRecipePanelUC.axaml" value="RecipeApp/RecipeApp.csproj" />

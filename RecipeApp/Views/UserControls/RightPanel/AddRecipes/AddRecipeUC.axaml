@@ -16,64 +16,102 @@
             <StackPanel Orientation="Vertical" Name="TopStackPanel">
                 <TextBlock Classes="HeaderText" Text="{Binding HeaderText}"/>
                 <Button Content="{Binding UploadBtnTxt}"/>
-                <!-- <TextBox Name="LinkTextBox" Watermark="{Binding UploadLinkBoxTxt}"/> -->
-                <!-- <Button Name="LinkBtn"  Content="{Binding UploadLinkBtn}"/> -->
+                <StackPanel Orientation="Horizontal">
+                    <TextBox Name="LinkTextBox" Text="{Binding LinkTxt}" Watermark="{Binding UploadLinkBoxTxt}"/>
+                    <Button Name="LinkBtn"  Content="{Binding UploadLinkBtn}" Command="{Binding ParseRecipe}" CommandParameter="Link"/>
+                </StackPanel>
             </StackPanel>
         </Border>
         <!--Import Recipe-->
         
         <!--Manual Add-->
-        <TextBlock Classes="HeaderText" Text="{Binding OptionTwoText}"/>
+        <TextBlock Name="ManualAddHeaderTxt" Classes="HeaderText" Text="{Binding OptionTwoText}"/>
         
         <!--Recipe Details-->
         <StackPanel Orientation="Horizontal" Name="RecipeStackPanel">
             
             <!--Recipe Overview-->
-            <StackPanel Orientation="Vertical" Name="DetailsStackPanel">
+            <StackPanel Name="DetailsStackPanel" Orientation="Vertical" >
+                <TextBlock Name="OverviewHeaderText" Classes="HeaderText" Text="{Binding OverviewHeaderTxt}"/>
                 <uc:RecipeParameterUC DataContext="{Binding Name}"/>
-                <uc:RecipeParameterUC DataContext="{Binding Protein}"/>
                 <uc:RecipeParameterUC DataContext="{Binding Time}"/>
                 
-                <TextBox Name="IngredientTextBox" Text="{Binding CurrentIngredient, UpdateSourceTrigger=PropertyChanged}">
-                    <TextBox.KeyBindings>
-                        <KeyBinding Command="{Binding AddItem}" Gesture="Enter" CommandParameter="{Binding IngredientParam}"/>
-                    </TextBox.KeyBindings>
-                </TextBox>
+                <!--Ingredients-->
+                <StackPanel Name="IngredientsStackPanel" Orientation="Vertical">
+                    <TextBlock Name="IngredientsHeader" Classes="HeaderText" Text="{Binding IngredientParam}"/>
+                    <TextBox Name="IngredientTextBox" Classes="ItemTextBox" Text="{Binding CurrentIngredient, UpdateSourceTrigger=PropertyChanged}">
+                        <TextBox.KeyBindings>
+                            <KeyBinding Command="{Binding AddItem}" Gesture="Enter" CommandParameter="{Binding IngredientParam}"/>
+                        </TextBox.KeyBindings>
+                    </TextBox>
                 
-                
-                <ItemsControl ItemsSource="{Binding Ingredients}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
+                    <ItemsControl ItemsSource="{Binding Ingredients}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Name="IngredientsWrapPanel"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
                     
-                    
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <TextBox Name="StepTemplate" Text="{Binding .}"/>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-                
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBox Name="StepTemplate" Text="{Binding .}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <!--Ingredients-->
+                </StackPanel>
                 
             </StackPanel>
             <!--Recipe Overview-->
             
-            <!--Recipe Steps-->
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="{Binding AddStepTxt}"/>
-                <Button Name="AddItemButton" Command="{Binding AddItem}" CommandParameter="{Binding StepParam}"/>
+            <StackPanel Name="StepsStackPanel" Orientation="Vertical">
+                <TextBlock Name="StepsHeader" Classes="HeaderText" Text="{Binding StepParam}"/>
+                <!--Recipe Steps-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{Binding AddStepTxt}"/>
+                </StackPanel>
+            
+                <StackPanel Orientation="Vertical">
+                    <TextBox Name="StepTextBox" Classes="ItemTextBox" Text="{Binding CurrentStep, UpdateSourceTrigger=PropertyChanged}">
+                        <TextBox.KeyBindings>
+                            <KeyBinding Command="{Binding AddItem}" Gesture="Enter" CommandParameter="{Binding StepParam}"/>
+                        </TextBox.KeyBindings>
+                    </TextBox>
+                
+                    <ItemsControl ItemsSource="{Binding Steps}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Name="StepsWrapPanel"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    
+                    
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBox Name="StepTemplate" Text="{Binding .}"/>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+                <!--Recipe Steps-->
             </StackPanel>
+           
+        </StackPanel>
+        <!--Recipe Details-->
+        
+        
+        <!--Tags-->
+        <StackPanel Name="TagsStackPanel" Orientation="Vertical">
+            <TextBlock Name="TagHeader" Classes="HeaderText" Text="{Binding TagParam}"/>
             
             <StackPanel Orientation="Vertical">
-                <TextBox Name="StepTextBox" Text="{Binding CurrentStep, UpdateSourceTrigger=PropertyChanged}">
+                <TextBox Name="TagTextBox" Classes="ItemTextBox" Text="{Binding CurrentTag, UpdateSourceTrigger=PropertyChanged}">
                     <TextBox.KeyBindings>
-                        <KeyBinding Command="{Binding AddItem}" Gesture="Enter" CommandParameter="{Binding StepParam}"/>
+                        <KeyBinding Command="{Binding AddItem}" Gesture="Enter" CommandParameter="{Binding TagParam}"/>
                     </TextBox.KeyBindings>
                 </TextBox>
                 
-                <ItemsControl ItemsSource="{Binding Steps}">
+                <ItemsControl ItemsSource="{Binding Tags}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel/>
@@ -88,13 +126,7 @@
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </StackPanel>
-            <!--Recipe Steps-->
         </StackPanel>
-        <!--Recipe Details-->
-       
-        
-        <StackPanel Orientation="Horizontal">
-            <TextBlock Text="{Binding Tags}"/>
-        </StackPanel>
+        <!--Tags-->
     </StackPanel>
 </UserControl>

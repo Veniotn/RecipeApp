@@ -179,6 +179,11 @@
                 <Setter Property="FontWeight" Value="Bold"/>
             </Style>
             
+            <Style Selector="^ TextBlock#ManualAddHeaderTxt">
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="Margin" Value="0,5,110,20"/>
+            </Style>
+            
             <Style Selector="^ TextBox">
                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
                 <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -194,17 +199,42 @@
                 
                 <Setter Property="HorizontalAlignment" Value="Center"/>
                 
+                <Style Selector="^ StackPanel">
+                    <Setter Property="Margin" Value="0,10"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+                
                 <Style Selector="^ Button">
                     <Setter Property="Background" Value="#4A6FA5"/>
                     <Setter Property="Foreground" Value="White"/>
-                    <Setter Property="Margin" Value="0,0,0,20"/>
+                </Style>
+                
+                <Style Selector="^ TextBox#LinkTextBox">
+                    <Setter Property="Width" Value="300"/>
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
                 </Style>
             </Style>
             
             
-            <Style Selector="^ TextBox">
-                <Setter Property="Width" Value="200"/>
+            
+            <Style Selector="^ TextBox#IngredientTextBox">
+                <Setter Property="MinWidth" Value="80"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
             </Style>
+            
+          
+            
+            <Style Selector="^ WrapPanel#IngredientsWrapPanel">
+                <Setter Property="Orientation" Value="Horizontal"/>
+            </Style>
+            
+            
+            <Style Selector="^ StackPanel#StepsStackPanel">
+                <Setter Property="Margin" Value="200,0,0,0"/>
+            </Style>
+            
+            
             
             <Style Selector="^ TextBox#StepTemplate">
                 <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -217,7 +247,11 @@
                 <Setter Property="Background" Value="Red"/>
             </Style>
             
-            <Style Selector="^ TextBox#StepTextBox">
+            <Style Selector="^ StackPanel#TagsStackPanel">
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+            </Style>
+            
+            <Style Selector="^ TextBox.ItemsTextBox">
                 <Setter Property="HorizontalContentAlignment" Value="Left"/>
                 <Setter Property="TextWrapping" Value="Wrap"/>
                 <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -225,7 +259,7 @@
                 <Setter Property="MaxWidth" Value="200"/>
                 <Setter Property="VerticalAlignment" Value="Top"/>
                 <Setter Property="Margin" Value="10"/>
-                <Setter Property="Background" Value="Red"/>
+                <Setter Property="Background" Value="Gray"/>
             </Style>
             
             <Style Selector="^ WrapPanel">
@@ -233,10 +267,19 @@
                 <Setter Property="MaxWidth" Value="500"/>
             </Style>
             
+            <Style Selector="^ uc|RecipeParameterUC">
+                <Style Selector="^ TextBox">
+                    <Setter Property="MinWidth" Value="200"/>
+                    <Setter Property="MaxWidth" Value="250"/>
+                    <Setter Property="TextWrapping" Value="Wrap"/>
+                </Style>
+            </Style>
             
-            <Style Selector="^ uc|StepsUC">
+            
+            <Style Selector="^ uc|RecipeItemUC">
                 <Style Selector="^ Border">
-                    <Setter Property="Background" Value="Gray"/>
+                    <Setter Property="Background" Value="Wheat"/>
+                    <Setter Property="CornerRadius" Value="3"/>
                 </Style>
             
                 <Style Selector="^ Button">

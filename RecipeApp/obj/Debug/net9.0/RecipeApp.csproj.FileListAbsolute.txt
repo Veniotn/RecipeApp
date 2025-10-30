@@ -80,3 +80,5 @@ D:\Projects\DesktopApplications\RecipeApp\bin\Debug\net9.0\Svg.Model.dll
 D:\Projects\DesktopApplications\RecipeApp\bin\Debug\net9.0\Avalonia.Svg.Skia.dll
 D:\Projects\DesktopApplications\RecipeApp\bin\Debug\net9.0\SkiaSharp.HarfBuzz.dll
 D:\Projects\DesktopApplications\RecipeApp\bin\Debug\net9.0\Svg.Skia.dll
+D:\Projects\DesktopApplications\RecipeApp\bin\Debug\net9.0\HtmlAgilityPack.dll
+D:\Projects\DesktopApplications\RecipeApp\bin\Debug\net9.0\Newtonsoft.Json.dll

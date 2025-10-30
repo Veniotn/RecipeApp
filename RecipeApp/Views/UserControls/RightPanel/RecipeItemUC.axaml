@@ -4,11 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:DesktopApplications.ViewModels"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="DesktopApplications.UserControls.StepsUC"
-             x:DataType="vm:StepViewModel">
+             x:Class="DesktopApplications.UserControls.RecipeItemUC"
+             x:DataType="vm:RecipeItemViewModel">
     
         <StackPanel Orientation="Horizontal">
-            <TextBlock Text="{Binding StepNumber}"/>
+            <TextBlock Text="{Binding StepNumberText}"/>
             <Border>
                 <TextBlock Text="{Binding Text}"/>
             </Border>

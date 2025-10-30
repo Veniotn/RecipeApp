@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bDsitlnDQ2A=",
+  "dgSpecHash": "8s2E2lattwE=",
   "success": true,
   "projectFilePath": "D:\\Projects\\DesktopApplications\\RecipeApp\\RecipeApp.csproj",
   "expectedPackageFiles": [
@@ -27,7 +27,9 @@
     "C:\\Users\\nickv\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\8.3.1.1\\harfbuzzsharp.nativeassets.macos.8.3.1.1.nupkg.sha512",
     "C:\\Users\\nickv\\.nuget\\packages\\harfbuzzsharp.nativeassets.webassembly\\8.3.1.1\\harfbuzzsharp.nativeassets.webassembly.8.3.1.1.nupkg.sha512",
     "C:\\Users\\nickv\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\8.3.1.1\\harfbuzzsharp.nativeassets.win32.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\nickv\\.nuget\\packages\\htmlagilitypack\\1.12.4\\htmlagilitypack.1.12.4.nupkg.sha512",
     "C:\\Users\\nickv\\.nuget\\packages\\microcom.runtime\\0.11.0\\microcom.runtime.0.11.0.nupkg.sha512",
+    "C:\\Users\\nickv\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
     "C:\\Users\\nickv\\.nuget\\packages\\shimskiasharp\\3.0.2\\shimskiasharp.3.0.2.nupkg.sha512",
     "C:\\Users\\nickv\\.nuget\\packages\\skiasharp\\3.116.1\\skiasharp.3.116.1.nupkg.sha512",
     "C:\\Users\\nickv\\.nuget\\packages\\skiasharp.harfbuzz\\3.116.1\\skiasharp.harfbuzz.3.116.1.nupkg.sha512",

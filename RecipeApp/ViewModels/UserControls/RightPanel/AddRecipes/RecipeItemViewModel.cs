@@ -5,12 +5,12 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace DesktopApplications.ViewModels;
 
-public partial class StepViewModel : ViewModelBase
+public partial class RecipeItemViewModel : ViewModelBase
 {
     
     private string type;
     [ObservableProperty] private int _stepNumber;
-    [ObservableProperty] private string _stepNumberText;
+    [ObservableProperty] private string _stepNumberText  = String.Empty;
     [ObservableProperty] private string _text = "";
     [ObservableProperty] private string _deleteText = "X";
     [ObservableProperty] private Image _deleteIcon;
@@ -18,12 +18,16 @@ public partial class StepViewModel : ViewModelBase
     
 
 
-    public StepViewModel(string type, string stepText, int stepNumber, AddRecipeViewModel addRecipeViewModel)
+    public RecipeItemViewModel(string type, string stepText, int stepNumber, AddRecipeViewModel addRecipeViewModel)
     {
         this.type = type;
         _text = stepText;
         _stepNumber = stepNumber;
-        _stepNumberText = stepNumber + ". ";
+        if (type == "Steps")
+        {
+            _stepNumberText = stepNumber + ". ";
+        }
+        
         _addRecipeViewModel = addRecipeViewModel;
         
     }
@@ -31,7 +35,7 @@ public partial class StepViewModel : ViewModelBase
     
     public void DeleteStep()
     {
-        AddRecipeViewModel.DeteleStep(type, StepNumber);
+        AddRecipeViewModel.DeleteStep(type, StepNumber);
     }
     
 }
