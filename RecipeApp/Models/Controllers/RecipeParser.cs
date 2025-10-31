@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using DesktopApplications.Models.Classes;
@@ -39,7 +40,46 @@ public class RecipeParser
 
     private string TryParseHtml(HtmlDocument document)
     {
+        Recipe recipe = new Recipe();
+
+        HtmlNode titleNode = document.DocumentNode.SelectSingleNode("//h1");
+
+        recipe.Name = titleNode?.InnerText.Trim() ?? "Unknown Recipe";
+        
+        Console.WriteLine(recipe.Name);
+
+        HtmlNodeCollection ingredientsNodes =
+            document.DocumentNode.SelectNodes(
+                "//ul[contains(@class, 'ingredient') or contains(@class, 'ingredients')]/li");
+
+
+        recipe.ingredients = FillList(ingredientsNodes);
+
+        if (recipe.ingredients.Count == 0)
+        {
+            Console.WriteLine("no ul");
+            //try for ids instead of classes
+            ingredientsNodes = document.DocumentNode.SelectNodes("//*[contains(@id, 'ingredient') or contains(@class, 'ingredients')/li");
+            recipe.ingredients = FillList(ingredientsNodes);
+        }
+        
+        
+        
         return string.Empty;
+    }
+
+    private List<string> FillList( HtmlNodeCollection htmlNodes)
+    {
+        List<string> list = new();
+        if (htmlNodes != null)
+        {
+            foreach (HtmlNode li in htmlNodes)
+            {
+                Console.WriteLine(WebUtility.HtmlDecode(li.InnerText.Trim()));
+                list.Add(li.InnerText.Trim());
+            }
+        }
+        return list;
     }
 
 
